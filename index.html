@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile HR Analytics Copilot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+        }
+
+        .main-content {
+            flex: 1;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .sidebar-container {
+            width: 40px; /* Initial width for collapsed state */
+            height: 100vh;
+            background-color: #fff;
+            border-left: 1px solid #e0e0e0;
+            transition: width 0.3s ease-in-out;
+            overflow: hidden; /* Ensure no content is visible when collapsed */
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .sidebar-container.open {
+            width: 400px; /* Expanded width */
+        }
+
+        .top-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Align button to the left */
+            height: 40px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ccc;
+            padding-left: 8px; /* Add padding for left alignment */
+        }
+
+        .chat-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .chat-toggle img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .chat-panel {
+            flex-grow: 1;
+            display: flex;
+            visibility: hidden; /* Ensure the content is hidden when collapsed */
+        }
+
+        .sidebar-container.open .chat-panel {
+            visibility: visible; /* Show content only when expanded */
+        }
+
+        .chat-panel iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <div class="main-content">
+<iframe title="Agile HR Analytics V4.7 Advanced - New Theme" width="1140" height="541.25" src="https://app.powerbi.com/view?r=eyJrIjoiYWYxMjc2ZWMtNTAxYi00MDE5LWFjN2UtY2Y2MDU1YTIxYjVmIiwidCI6IjAzNmY4MTVjLTNkOTItNDJmMi1hNTk1LWQ2OWUxN2EwMzE5NCJ9" frameborder="0" allowFullScreen="true"></iframe>
+
+    </div>
+
+    <div class="sidebar-container" id="sidebar">
+        <div class="top-row">
+            <button class="chat-toggle" onclick="toggleSidebar()">
+                <img src="https://explore.agile-hr-analytics.com/copilot.png" alt="Chat Toggle">
+            </button>
+        </div>
+        <div class="chat-panel">
+            <iframe 
+                src="https://web.powerva.microsoft.com/environments/aef5b5f4-76bc-e6de-83b9-231605ade60a/bots/crddb_agileAnalyticsBot/webchat?__version__=2">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
